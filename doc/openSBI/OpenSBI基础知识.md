@@ -26,12 +26,14 @@ SBI是类系统调用的Supervisor和SEE之间的调用转换。
 3. OpenSBI从DDR中开始执行，进行相关设置。跳转到U-Boot中执行。
 4. U-Boot加载Linux到DDR中，进行解析、解压等操作。最后跳转到Linux中运行。
 5. 最后处于运行态的仅有OpenSBI和Linux，Linux通过sbi指令和OpenSBI进行交互。
+
 ![启动流程](img/bring-up.png)
 
 # 4. RISCV固件组成
 SBI Library：通用功能抽象。</br>
 Platform Specific Library：某些平台特有的功能。</br>
-固件：提供三种不同类型的Runtime固件，包括Payload、Dynamic、Jump。</br>
+固件：提供三种不同类型的Runtime固件，包括Payload、Dynamic、Jump。
+
 ![固件结构](img/firmware-struct.png)
 
 # 5. OpenSBI固件形态
